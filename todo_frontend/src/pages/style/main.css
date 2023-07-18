@@ -1,0 +1,324 @@
+/*  task code  starts */
+
+
+:root{
+
+    --dark:#374151;
+    --darker : #1f2937;
+    --darkest : #111827;
+    --gray : #6b7280;
+    --light : #EEE;
+    --pink : #EC4899;
+    --purple : #885cf6;
+        
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Fire sans' , sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background:var(--dark);
+    color:#fff;
+}
+
+header{
+    padding:2rem 1rem;
+    max-width: 800px;
+    margin:0 auto;
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color:var(--gray);
+    margin-bottom: 1rem;
+}
+
+#new-task-form{
+    display: flex;
+}
+input,button{
+    appearance: none;
+    border: none;
+    outline:none;
+    background:none;
+}
+
+#new-task-input{
+    flex:2 1 0%;
+    background:var(--darker);
+    border-radius: 1rem;
+    color : var(--light);
+    padding: 1rem;
+}
+#new-task-input::placeholder{
+    color : var(--gray);
+}
+#new-task-submit{
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right,var(--pink),var(--purple));
+    -webkit-background-clip : text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-left: 1.2rem;
+
+}
+
+#new-task-submit::hover{
+    opacity: 0.8;
+}
+
+#new-task-submit:active{
+    opacity:0.6;
+}
+/*  main section starts */
+main{
+    flex: 1 1 0% ;
+    
+    max-width: 800px;
+    width:100%;
+    margin:0 auto;
+}
+
+.task-list{
+    padding:1rem;
+
+}
+
+.task-list h2{
+    font-size : 1.5rem;
+    font-weight: 300;
+    color : var(--gray);
+    margin-bottom: 1rem;
+}
+
+#tasks .task{
+    display:flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding:1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+#tasks .task .content .text{
+    color:var(--light);
+    font-size : 1.125rem;
+    width:100%;
+    display: block;
+    transition: 0.4s;
+
+}
+#tasks .task .content .text:not(:read-only){
+        color: var(--pink);
+
+}
+
+#tasks .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button{
+    cursor:pointer;
+    margin : 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight : 700px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.task .actions button:hover{
+    opacity: 0.8;
+}
+.task .actions button:active{
+    opacity: 0.6;
+}
+
+.task .actions .edit{
+    background-image: linear-gradient(to right,var(--pink),var(--purple));
+    -webkit-background-clip : text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.task .actions .delete{
+        color:crimson;
+}
+.task .actions .open{
+    color:lightseagreen;
+}
+
+
+
+/*  main section ends */
+
+
+
+
+
+/*  task code ends */
+
+.container{
+
+            width: 100%;
+            height: 100vh;
+            /* background-image: linear-gradient(rgba(0,0,0,0.8) , rgba(0,0,0,0.8),url(backgroud-image.jpeg)); */
+            /* background-position: cover; */
+            position: relative;
+}
+
+.form-box{
+        width: 90%;
+        max-width: 450px;
+        position : absolute;
+        top: 50%;
+        left : 50%;
+        transform:  translate(-50%,-50%);
+        background : #fff;
+        padding: 50px 60px 70px;
+        text-align: center;
+}
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color:#00ADB5;
+    position: relative;
+}
+.form-box h1::after{
+        content : '';
+        width:30px;
+        height : 4px;
+        border-radius: 3px;
+        background : #00ADB5;
+        position: absolute;
+        bottom: -12px;
+        left:50%;
+        transform : translateX(-50%);
+}
+
+.input-field{
+    background: #eaeaea; 
+    margin:15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+.input-field > input{
+    width:100%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    padding : 18px 15px;
+    
+
+}
+.input-field i{
+    margin-left: 15px;
+    color: #999;
+}
+
+form p{
+    text-align: left;
+    font-size: 13px;
+
+}
+.forget-pass a{
+    text-decoration: none;
+    color: #00ADB5;
+}
+
+.btn-field button{
+    /* flex-basis: 48%; */
+    width:100%;
+    background : #00ADB5;
+    color : #fff;
+    height: 40px;
+    border-radius: 20px;
+    border:0;
+    outline: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: backgroud 1s;
+}
+
+
+.login-input-group{
+    height : 200px;
+}
+.signup-input-group
+{
+    height: 350px;
+}
+
+.btn-field .disable{
+    background : #eaeaea;
+    color:#555;
+}
+
+
+
+
+
+/*  Login and signup section start */
+
+
+/*  Nav bar start */
+
+.navbar {
+    background-color: var(--dark);
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .navbar-logo img {
+    height: 30px;
+    width: auto;
+  }
+  
+  .navbar-title {
+    flex-grow: 1;
+    margin-left: 1rem;
+  }
+  
+  .navbar-title h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .navbar-user {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-user span {
+    margin-right: 0.5rem;
+  }
+  
+  .logout-button {
+    background-color: var(--darker);
+    color: var(--light);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: var(--darkest);
+  }
+  
+
+/* navbar ends*/
